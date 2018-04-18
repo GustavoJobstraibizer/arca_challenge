@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+  Categoria
+{% endblock %}
+
+{% block body %}
+  <h1>Categoria - <small>{{ categoria.id }}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th>Código</th>
+        <td>{{ categoria.id }}</td>
+      </tr>
+
+      <tr>
+        <th>Descrição</th>
+        <td>{{ categoria.descricao }}</td>
+      </tr>
+
+      <tr>
+        <th>Empresas</th>
+        <td>
+          <ul>
+            {% for empresa in categoria.category %}
+              <li><a href="{{ path("visualizar_empresa", {"id": empresa.id}) }}">{{ empresa.titulo }}</a></li>
+              {% else %}
+              <li>Essa categoria não esta vinculada a nenhuma empresa.</li>
+              {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}

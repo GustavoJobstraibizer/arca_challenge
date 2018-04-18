@@ -1,0 +1,11 @@
+{{ form_start(form, {"attr": {"novalidate": "novalidate"}}) }}
+
+{{ form_row(form._token) }}
+
+<div class="form-group">
+  {{ form_label(form.descricao) }}
+  {{ form_widget(form.descricao) }}
+  {{ form_errors(form.descricao) }}
+</div>
+
+{{ form_widget(form.enviar) }}

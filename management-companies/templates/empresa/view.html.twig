@@ -1,0 +1,66 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+  Empresa
+{% endblock %}
+
+{% block body %}
+  <h1>Empresa - <small>{{ empresa.titulo }}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <th>Código</th>
+        <td>{{ empresa.id }}</td>
+      </tr>
+
+      <tr>
+        <th>Título</th>
+        <td>{{ empresa.titulo }}</td>
+      </tr>
+
+      <tr>
+        <th>Telefone</th>
+        <td>{{ empresa.telefone }}</td>
+      </tr>
+
+      <tr>
+        <th>Endereço</th>
+        <td>{{ empresa.endereco }}</td>
+      </tr>
+
+      <tr>
+        <th>Cep</th>
+        <td>{{ empresa.cep }}</td>
+      </tr>
+
+      <tr>
+        <th>Cidade</th>
+        <td>{{ empresa.cidade }}</td>
+      </tr>
+
+      <tr>
+        <th>Estado</th>
+        <td>{{ empresa.estado }}</td>
+      </tr>
+
+      <tr>
+        <th>Descrição</th>
+        <td>{{ empresa.descricao }}</td>
+      </tr>
+
+      <tr>
+        <th>Categorias</th>
+        <td>
+          <ul>
+            {% for categoria in empresa.categoria %}
+              <li><a href="{{ path("visualizar_categoria", {"id": categoria.id}) }}">{{ categoria.descricao }}</a></li>
+              {% else %}
+              <li>Nenhuma categoria cadastrada.</li>
+              {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}

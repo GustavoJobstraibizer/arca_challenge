@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+  Edição de Categoria
+{% endblock %}
+
+{% block body %}
+  <h1>Editar Categoria- <small>{{ categoria.id }}</small></h1>
+  <hr>
+  {% include "categoria/_form.html.twig" %}
+{% endblock %}

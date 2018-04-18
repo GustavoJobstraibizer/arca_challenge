@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Categorias{% endblock %}
+
+{% block body %}
+
+  {% for flashMessage in app.session.flashbag.get('success') %}
+    <div class="alert alert-success alert-dismissible fade show">
+      {{ flashMessage }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% endfor %}
+
+  {% for flashMessage in app.session.flashbag.get('warning') %}
+    <div class="alert alert-warning alert-dismissible fade show">
+      {{ flashMessage }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  {% endfor %}
+
+  <h1>Categorias</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <a class="btn btn-primary btn-lg pull-right" href="{{ path("cadastrar_categoria") }}">Adicionar Categoria</a>
+    </div>
+  </div>
+  <table class="table table-striped table-hover mt-3">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Descrição</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      {% for categoria in categorias %}
+        <tr>
+          <td>{{ categoria.id }}</td>
+          <td>{{ categoria.descricao }}</td>
+          <td>
+            <a class="btn btn-sm btn-success" href="{{ path("editar_categoria", {"id": categoria.id}) }}"><i class="fas fa-pencil-alt"></i></a>
+            <a class="btn btn-sm btn-danger bt_excluir_categoria" href="{{ path("deletar_categoria", {"id": categoria.id}) }}"><i class="fas fa-trash-alt"></i></a>
+          </td>
+        </tr>
+      {% endfor %}
+
+    <script>
+      $(document).ready(function () {
+        $(".bt_excluir_categoria").click(function (ev) {
+          ev.preventDefault();
+
+          let url = $(this).prop('href');
+
+          if (confirm("Deseja realmente excluir a Categoria ?")) {
+            window.location = url;
+          }
+        });
+      });
+    </script>
+
+  </tbody>
+</table>
+
+{% endblock %}
