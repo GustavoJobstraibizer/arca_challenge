@@ -99,6 +99,11 @@ $catalogue = new MessageCatalogue('th', array (
     'Account is disabled.' => 'บัญชีถูกระงับแล้ว',
     'Account is locked.' => 'บัญชีถูกล็อกแล้ว',
   ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'ย้อนกลับ',
+    'next' => 'ถัดไป',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -210,6 +215,11 @@ $catalogueEn = new MessageCatalogue('en', array (
   array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
+  ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Previous',
+    'next' => 'Next',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

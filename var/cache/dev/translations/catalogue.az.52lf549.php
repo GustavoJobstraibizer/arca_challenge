@@ -83,6 +83,11 @@ $catalogue = new MessageCatalogue('az', array (
     'Account is disabled.' => 'Hesab qeyri-aktiv edilib.',
     'Account is locked.' => 'Hesab kilitlənib.',
   ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Əvvəlki',
+    'next' => 'Sonrakı',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -194,6 +199,11 @@ $catalogueEn = new MessageCatalogue('en', array (
   array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
+  ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Previous',
+    'next' => 'Next',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

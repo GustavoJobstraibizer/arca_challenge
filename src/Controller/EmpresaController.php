@@ -7,18 +7,37 @@ use App\Form\EmpresaType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Pagerfanta\Adapter\DoctrineORMAdapter;
+use Pagerfanta\Pagerfanta;
 
 class EmpresaController extends Controller {
 
   /**
    * @Route("/empresa", name="listar_empresa")
    */
-  public function index() {
+  public function index(Request $request) {
+
+    $page = $request->query->get('page', 1);
+
     $em = $this->getDoctrine()->getManager();
 
-    $empresas = $em->getRepository(Empresa::class)->findAll();
+    // $query = $em->getRepository(Empresa::class)->findAll();
+    $query = $em->createQueryBuilder()->select('e')->from('App\Entity\Empresa', 'e');
+    
+    $adapter = new DoctrineORMAdapter($query);
+    $pagerFanta = new Pagerfanta($adapter);
+    $pagerFanta->setMaxPerPage(5);
+    $pagerFanta->setCurrentPage($page);
+
+    $empresas = [];
+    foreach($pagerFanta->getCurrentPageResults() as $result) {
+      $empresas[] = $result;
+    }
 
     return $this->render("empresa/index.html.twig", [
+                'pages' => $pagerFanta,
+                'total' => $pagerFanta->getNbResults(),
+                'count' => count($empresas),
                 'empresas' => $empresas
     ]);
   }

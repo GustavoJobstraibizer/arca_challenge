@@ -112,6 +112,11 @@ $catalogue = new MessageCatalogue('en', array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
   ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Previous',
+    'next' => 'Next',
+  ),
 ));
 
 

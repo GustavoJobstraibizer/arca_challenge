@@ -79,6 +79,11 @@ $catalogue = new MessageCatalogue('uk', array (
     'The uploaded file was too large. Please try to upload a smaller file.' => 'Завантажений файл занадто великий. Будь-ласка, спробуйте завантажити файл меншого розміру.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'CSRF значення недопустиме. Будь-ласка, спробуйте відправити форму знову.',
   ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Попередня',
+    'next' => 'Наступна',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -190,6 +195,11 @@ $catalogueEn = new MessageCatalogue('en', array (
   array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
+  ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Previous',
+    'next' => 'Next',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

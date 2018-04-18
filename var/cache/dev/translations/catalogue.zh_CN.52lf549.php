@@ -106,6 +106,11 @@ $catalogue = new MessageCatalogue('zh_CN', array (
     'Account is disabled.' => '帐号已被禁用。',
     'Account is locked.' => '帐号已被锁定。',
   ),
+  'pagerfanta' => 
+  array (
+    'previous' => '上一页',
+    'next' => '下一页',
+  ),
 ));
 
 $catalogueZh = new MessageCatalogue('zh', array (
@@ -220,6 +225,11 @@ $catalogueEn = new MessageCatalogue('en', array (
   array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
+  ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Previous',
+    'next' => 'Next',
   ),
 ));
 $catalogueZh->addFallbackCatalogue($catalogueEn);

@@ -7,19 +7,39 @@ use App\Form\CategoriaType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Pagerfanta\Adapter\DoctrineORMAdapter;
+use Pagerfanta\Pagerfanta;
 
 class CategoriaController extends Controller {
 
   /**
    * @Route("/categoria", name="listar_categorias")
    */
-  public function index() {
+  public function index(Request $request) {
+
+    $page = $request->query->get('page', 1);
+
     $em = $this->getDoctrine()->getManager();
 
-    $categorias = $em->getRepository(Categoria::class)->findAll();
+    $query = $em->createQueryBuilder()->select('a')->from('App\Entity\Categoria', 'a');
+
+    $adapter = new DoctrineORMAdapter($query);
+    $pagerFanta = new Pagerfanta($adapter);
+    $pagerFanta->setMaxPerPage(5);
+    $pagerFanta->setCurrentPage($page);
+
+    $categorias = [];
+    foreach($pagerFanta->getCurrentPageResults() as $result) {
+      $categorias[] = $result;
+    }
+
+    // $categorias = $em->getRepository(Categoria::class)->findAll();
 
     return $this->render('categoria/index.html.twig', [
                 'categorias' => $categorias,
+                'count' => count($categorias),
+                'total' => $pagerFanta->getNbResults(),
+                'pages' => $pagerFanta
     ]);
   }
 

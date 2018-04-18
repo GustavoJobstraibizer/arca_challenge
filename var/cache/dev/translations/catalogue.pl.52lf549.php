@@ -112,6 +112,11 @@ $catalogue = new MessageCatalogue('pl', array (
     'label_previous' => 'Poprzednia',
     'label_next' => 'Następna',
   ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Poprzednia',
+    'next' => 'Następna',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -223,6 +228,11 @@ $catalogueEn = new MessageCatalogue('en', array (
   array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
+  ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Previous',
+    'next' => 'Next',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

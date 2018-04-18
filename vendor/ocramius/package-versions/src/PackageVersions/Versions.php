@@ -34,6 +34,7 @@ final class Versions
   'monolog/monolog' => '1.23.0@fd8c787753b3a2ad11bc60c063cff1358a32a3b4',
   'ocramius/package-versions' => '1.2.0@ad8a245decad4897cc6b432743913dad0d69753c',
   'ocramius/proxy-manager' => '2.0.4@a55d08229f4f614bf335759ed0cf63378feeb2e6',
+  'pagerfanta/pagerfanta' => 'v1.0.5@29aade64addfdfb12c05aabf160f09d1aea6b143',
   'phpdocumentor/reflection-common' => '1.0.1@21bdeb5f65d7ebf9f43b1b25d404f87deab5bfb6',
   'phpdocumentor/reflection-docblock' => '4.3.0@94fd0001232e47129dd3504189fa1c7225010d08',
   'phpdocumentor/type-resolver' => '0.4.0@9c977708995954784726e25d0cd1dddf4e65b0f7',
@@ -91,6 +92,7 @@ final class Versions
   'symfony/yaml' => 'v3.4.8@a42f9da85c7c38d59f5e53f076fe81a091f894d0',
   'twig/twig' => 'v2.4.8@7b604c89da162034bdf4bb66310f358d313dd16d',
   'webmozart/assert' => '1.3.0@0df1908962e7a3071564e857d86874dad1ef204a',
+  'white-october/pagerfanta-bundle' => 'v1.1.2@b783a86877eaa5e9844449db1c86d68ace804ae3',
   'zendframework/zend-code' => '3.1.0@2899c17f83a7207f2d7f53ec2f421204d3beea27',
   'zendframework/zend-eventmanager' => '3.2.0@9d72db10ceb6e42fb92350c0cb54460da61bd79c',
   'easycorp/easy-log-handler' => 'v1.0.4@1a617a37ab9389eac4e2e1d14cb70ee0087d724d',
@@ -105,7 +107,7 @@ final class Versions
   'symfony/stopwatch' => 'v3.4.8@eb17cfa072cab26537ac37e9c4ece6c0361369af',
   'symfony/var-dumper' => 'v3.4.8@951643091b39a6fd40fce56cd16e21e12bef3feb',
   'symfony/web-profiler-bundle' => 'v3.4.8@a6a1390c444d11bdb9dcabe42237dc584c2ef20e',
-  '__root__' => 'No version set (parsed as 1.0.0)@',
+  '__root__' => 'dev-master@a228b28b5ed663c9c78aea7b22736826cd61660a',
 );
 
     private function __construct()

@@ -27,6 +27,7 @@ class ComposerStaticInitc2cd5bd6433e239d39e1509eb5ddb5f3
         ),
         'W' => 
         array (
+            'WhiteOctober\\PagerfantaBundle\\' => 30,
             'Webmozart\\Assert\\' => 17,
         ),
         'T' => 
@@ -146,6 +147,10 @@ class ComposerStaticInitc2cd5bd6433e239d39e1509eb5ddb5f3
         'Zend\\Code\\' => 
         array (
             0 => __DIR__ . '/..' . '/zendframework/zend-code/src',
+        ),
+        'WhiteOctober\\PagerfantaBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/white-october/pagerfanta-bundle',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -462,6 +467,10 @@ class ComposerStaticInitc2cd5bd6433e239d39e1509eb5ddb5f3
             'ProxyManager\\' => 
             array (
                 0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
+            ),
+            'Pagerfanta\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/pagerfanta/pagerfanta/src',
             ),
         ),
         'K' => 

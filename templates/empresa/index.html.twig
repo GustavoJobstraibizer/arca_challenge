@@ -71,22 +71,27 @@
           </td>
         </tr>
       {% endfor %}
-
-    <script>
-      $(document).ready(function () {
-        $(".bt_excluir_empresa").click(function (ev) {
-          ev.preventDefault();
-
-          let url = $(this).prop('href');
-
-          if (confirm("Deseja realmente excluir a Empresa ?")) {
-            window.location = url;
-          }
-        });
-      });
-    </script>
-
   </tbody>
 </table>
+
+<div class="row col-md-12 center">
+  <div class="pagerfanta">
+    {{ pagerfanta(pages, 'twitter_bootstrap4') }}
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $(".bt_excluir_empresa").click(function (ev) {
+      ev.preventDefault();
+
+      let url = $(this).prop('href');
+
+      if (confirm("Deseja realmente excluir a Empresa ?")) {
+        window.location = url;
+      }
+    });
+  });
+</script>
 
 {% endblock %}

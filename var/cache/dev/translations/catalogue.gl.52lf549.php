@@ -106,6 +106,11 @@ $catalogue = new MessageCatalogue('gl', array (
     'Account is disabled.' => 'A conta está deshabilitada.',
     'Account is locked.' => 'A conta está bloqueada.',
   ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Anterior',
+    'next' => 'Seguinte',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -217,6 +222,11 @@ $catalogueEn = new MessageCatalogue('en', array (
   array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
+  ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Previous',
+    'next' => 'Next',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

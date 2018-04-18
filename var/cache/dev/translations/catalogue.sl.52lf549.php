@@ -106,6 +106,11 @@ $catalogue = new MessageCatalogue('sl', array (
     'Account is disabled.' => 'Račun je onemogočen.',
     'Account is locked.' => 'Račun je zaklenjen.',
   ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Nazaj',
+    'next' => 'Naprej',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -217,6 +222,11 @@ $catalogueEn = new MessageCatalogue('en', array (
   array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
+  ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Previous',
+    'next' => 'Next',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);

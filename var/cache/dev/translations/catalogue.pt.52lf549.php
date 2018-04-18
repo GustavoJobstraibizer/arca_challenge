@@ -85,6 +85,11 @@ $catalogue = new MessageCatalogue('pt', array (
     'The uploaded file was too large. Please try to upload a smaller file.' => 'O arquivo enviado é muito grande. Por favor, tente enviar um ficheiro mais pequeno.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'O token CSRF é inválido. Por favor submeta o formulário novamente.',
   ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Anterior',
+    'next' => 'Próxima',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -196,6 +201,11 @@ $catalogueEn = new MessageCatalogue('en', array (
   array (
     'label_previous' => 'Previous',
     'label_next' => 'Next',
+  ),
+  'pagerfanta' => 
+  array (
+    'previous' => 'Previous',
+    'next' => 'Next',
   ),
 ));
 $catalogue->addFallbackCatalogue($catalogueEn);
